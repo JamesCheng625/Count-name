@@ -16,7 +16,17 @@
       repo: 'https://github.com/JamesCheng625/Count-name',
       loadSidebar: true,
       subMaxLevel: 2,
-      executeScript: true
+      executeScript: true,
+      plugins: [
+        function(hook, vm) {
+          hook.doneEach(function() {
+            const btn = document.getElementById('btnCount');
+            if (btn) {
+              btn.addEventListener('click', window.countNames);
+            }
+          });
+        }
+      ]
     }
     
     // Global function for the demo page
