@@ -2,7 +2,11 @@
 
 A simple and safe Web-based tool to count name frequencies and extract unique names.
 
-## 🚀 Quick Start
+## � Links
+- **[Documentation](https://JamesCheng625.github.io/Count-name/)**: Full guide on how to use the tool.
+- **[Live Demo](https://JamesCheng625.github.io/Count-name/#/demo)**: Try the counting logic directly in your browser.
+
+## �🚀 Quick Start
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
