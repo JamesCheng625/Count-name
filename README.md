@@ -1,14 +1,27 @@
-# Count-name
+# Count-name (Web UI)
 
-A simple Python tool to count name frequencies and extract unique names.
+A simple and safe Web-based tool to count name frequencies and extract unique names.
 
-## 📖 Documentation
-Check out our live documentation page here: [https://JamesCheng625.github.io/Count-name/](https://JamesCheng625.github.io/Count-name/)
+## 🚀 Quick Start
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Run the web server:
+   ```bash
+   python app.py
+   ```
+3. Open your browser and go to `http://127.0.0.1:5000`.
 
-## 🚀 Usage
-1. Put the names you need to count in `name_to_count.txt`.
-2. Run `count name.py`.
-3. The unique data will be saved in `name_to_output.txt`.
+## 📖 Features
+- **Paste or Upload**: Enter names directly in the text area or upload a `.txt` file.
+- **Instant Analysis**: Get total counts, unique counts, and frequency of repeated names.
+- **Download Results**: Export the cleaned, sorted unique names list with one click.
 
-For more details, visit the [Documentation](https://JamesCheng625.github.io/Count-name/).
+## 🛡️ Safety Features
+- **In-Memory Processing**: The Web UI processes data in memory and provides downloads, reducing the need for direct local file system writes.
+- **UTF-8 Support**: Full support for international characters.
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

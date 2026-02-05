@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Counter Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; padding-top: 50px; }
+        .container { max-width: 800px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .result-box { background-color: #e9ecef; padding: 20px; border-radius: 5px; margin-top: 20px; }
+        .btn-primary { background-color: #4CAF50; border: none; }
+        .btn-primary:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Name Counter Tool</h2>
+        
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="names_text" class="form-label">Paste Names Here (one per line):</label>
+                <textarea class="form-control" id="names_text" name="names_text" rows="8" placeholder="Alice&#10;Bob&#10;Alice..."></textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label for="file" class="form-label">Or Upload a Text File:</label>
+                <input class="form-control" type="file" id="file" name="file" accept=".txt">
+            </div>
+            
+            <button type="submit" class="btn btn-primary w-100">Process & Count</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <h4>Results Summary</h4>
+            <p><strong>Total Names:</strong> {{ result.total_names }}</p>
+            <p><strong>Unique Names Count:</strong> {{ result.unique_names_count }}</p>
+            
+            {% if result.repeated_names %}
+            <h5>Repeated Names:</h5>
+            <ul>
+                {% for name, count in result.repeated_names.items() %}
+                <li>{{ name }}: {{ count }} times</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No repeated names found.</p>
+            {% endif %}
+
+            <form action="/download" method="post" class="mt-3">
+                <input type="hidden" name="unique_names" value="{{ result.sorted_unique_names|join('\n') }}">
+                <button type="submit" class="btn btn-outline-success">Download Unique Names (.txt)</button>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,6 +1,9 @@
 # Count-name Documentation
 
-Welcome to the **Count-name** project documentation! This tool helps you count name frequencies and extract unique names from a text file, featuring a user-friendly graphical interface (GUI).
+Welcome to the **Count-name** project documentation! This tool helps you count name frequencies and extract unique names from a text file.
+
+## 🎮 [Try the Live Demo](demo.md)
+Test the functionality directly in your browser without installing anything! [Click here to open the Demo](demo.md).
 
 ## 📥 Installation
 
