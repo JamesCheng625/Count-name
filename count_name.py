@@ -114,7 +114,7 @@ class NameCounterApp:
         report.append("\n" + "="*30 + "\n")
         
         # Save unique names to file
-        output_file_path = 'name_to_u.txt'
+        output_file_path = 'name_to_output.txt'
         try:
             with open(output_file_path, 'w', encoding='utf-8') as output_file:
                 for unique_name in result['sorted_unique_names']:

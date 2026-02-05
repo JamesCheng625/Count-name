@@ -34,7 +34,7 @@ If you have built or downloaded the `.exe` file, simply double-click it to launc
 3.  **Process**: Click **Process & Count** to run the analysis.
 4.  **Results**:
     - The stats (Total keys, Unique counts, Repetitions) will be shown in the text area.
-    - A clean list of unique names will be saved to `name_to_u.txt`.
+    - A clean list of unique names will be saved to `name_to_output.txt`.
 
 ## 📦 Building the Executable (.exe)
 You can convert this Python script into a standalone `.exe` file so it can be run on any Windows computer without installing Python.
@@ -57,7 +57,7 @@ You can convert this Python script into a standalone `.exe` file so it can be ru
 ## 🛠️ Features
 - **User-Friendly UI**: Simple graphical interface for easy operation.
 - **Name Counting**: Calculates total names and identifies duplicates.
-- **Unique List**: Generates a sorted, duplicate-free list (`name_to_u.txt`).
+- **Unique List**: Generates a sorted, duplicate-free list (`name_to_output.txt`).
 - **Input Filtering**: Ignores empty lines.
 
 ## 📋 Example
